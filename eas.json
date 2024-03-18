@@ -1,0 +1,51 @@
+{
+  "cli": {
+    "version": ">= 7.3.0"
+  },
+  "build": {
+    "development": {
+      "distribution": "internal",
+      "developmentClient": true,
+      "channel": "development",
+      "env": {
+        "APP_VARIANT": "development",
+        "SENTRY_ORG": "qwerty",
+        "SENTRY_PROJECT": "rewq",
+        "EXPO_PUBLIC_SENTRY_DSN": "https://5555b32c313745f146cb070180715605@o4505238490120192.ingest.us.sentry.io/4506867814054353463636",
+        "EXPO_PUBLIC_API_URL": "https://api-dev.fliiks.com/app-main"
+      }
+    },
+    "development:simulator": {
+      "extends": "development",
+      "ios": {
+        "simulator": true
+      }
+    },
+    "preview": {
+      "distribution": "internal",
+      "channel": "staging",
+      "env": {
+        "APP_VARIANT": "staging",
+        "SENTRY_ORG": "qwerty",
+        "SENTRY_PROJECT": "rewq",
+        "EXPO_PUBLIC_SENTRY_DSN": "https://5555b32c313745f146cb070180715605@o4505238490120192.ingest.us.sentry.io/4506867814054353463636",
+        "EXPO_PUBLIC_API_URL": "https://api-stag.fliiks.com/app-main"
+      }
+    },
+    "production": {
+      "channel": "production",
+      "distribution": "store",
+      "autoIncrement": true,
+      "env": {
+        "APP_VARIANT": "production",
+        "SENTRY_ORG": "qwerty",
+        "SENTRY_PROJECT": "rewq",
+        "EXPO_PUBLIC_SENTRY_DSN": "https://5555b32c313745f146cb070180715605@o4505238490120192.ingest.us.sentry.io/4506867814054353463636",
+        "EXPO_PUBLIC_API_URL": "https://api.fliiks.com/app-main"
+      }
+    }
+  },
+  "submit": {
+    "production": {}
+  }
+}

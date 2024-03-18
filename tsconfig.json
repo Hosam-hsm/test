@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "baseUrl": "./src",
+    "paths": {
+      "@hooks/*": ["hooks/*"],
+      "@components/*": ["components/*"],
+      "@contexts/*": ["contexts/*"],
+      "@theme": ["theme"],
+      "@common/*": ["common/*"],
+      "@services/*": ["services/*"],
+      "@utils/*": ["utils/*"],
+    }
+  },
+  "extends": "expo/tsconfig.base",
+  "include": [
+    "**/*.ts",
+    "**/*.tsx",
+    ".expo/types/**/*.ts",
+    "expo-env.d.ts", 
+    "metro.config.ts"  ],
+}
